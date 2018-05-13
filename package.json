@@ -1,0 +1,59 @@
+{
+  "name": "epic",
+  "version": "1.0.0",
+  "description": "### Framework:  * node.js  * express  * html  * css  * ejs  * js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adblock-detect": "^1.0.5",
+    "bcrypt-nodejs": "latest",
+    "blockadblock": "^3.2.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.0.0",
+    "co": "^4.6.0",
+    "config": "^1.26.2",
+    "connect-flash": "~0.1.1",
+    "connect-redis": "^3.3.2",
+    "cookie-parser": "~1.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "express-session": "^1.0.4",
+    "helmet": "3.9.0",
+    "just-detect-adblock": "^1.0.0",
+    "log4js": "^2.3.10",
+    "method-override": "~1.0.0",
+    "mobile-detect": "^1.3.7",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.13",
+    "morgan": "~1.0.0",
+    "only": "0.0.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "pretty-ms": "3.1.0",
+    "pretty-time": "0.2.0",
+    "qs": "^6.5.1",
+    "redis": "^2.8.0",
+    "startbootstrap-new-age": "^3.3.7",
+    "underscore": "^1.8.3",
+    "winston": "^3.0.0-rc0"
+  },
+  "devDependencies": {
+    "cssnano": "3.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MallikaKhullar/ef-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MallikaKhullar/ef-website/issues"
+  },
+  "homepage": "https://github.com/MallikaKhullar/ef-website#readme"
+}

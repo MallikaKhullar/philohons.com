@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Flutur - Contact</title>
+    <link rel="icon" href="image/header_logo.png" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand:400,700" />
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css-min/new-age.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/mobile-view.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <meta name="keywords" content="flutur,  flutur new tab, flutur effect, flutur bengaluru, flutur india, flutur foundation, flutur chrome tab, tabs for a change, chrome new tab, flutur tabs for a change, flutur ngos donation, flutur donatewithoutdonating"
+    />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111348597-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111348597-1');
+    </script>
+
+    <style>
+        .small-margin-top {
+            margin-top: 10px;
+        }
+        
+        .big-margin-top {
+            margin-top: 60px;
+        }
+        
+        .small-margin-bottom {
+            margin-bottom: 10px;
+        }
+        
+        .footer-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-icons {
+            font-size: 20px;
+        }
+        
+        .side-margin-5 {
+            margin: 0 15px;
+        }
+        
+        .footer-desc {
+            display: none
+        }
+        
+        body,
+        html {
+            background: white;
+            font-family: Quicksand;
+        }
+        
+        @media (min-width: 768px) {
+            .navbar-default .navbar-header .navbar-brand {
+                color: rgba(0, 0, 0, 0.7);
+            }
+            .navbar-default .nav>li>a,
+            .navbar-default .nav>li>a:focus {
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                width: 90%;
+            }
+        }
+        
+        h2 {
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 25px;
+        }
+        
+        li {
+            font-size: 20px;
+        }
+        
+        p {
+            font-size: 16px;
+            margin-left: 60px;
+            margin-bottom: 30px;
+        }
+        
+        .terms-container {
+            padding: 15px 0px;
+        }
+        
+        .big-subtitle {
+            line-height: 50px;
+        }
+        
+        .big-title {
+            color: #000000;
+            font-family: Quicksand;
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 100px;
+        }
+        
+        .info {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .resp-footer {
+            margin-top: 50px;
+        }
+        
+        .small-resp-footer {
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 700px) {
+            .big-title {
+                font-size: 50px;
+            }
+        }
+    </style>
+
+    <%- include partial-head.ejs %>
+
+</head>
+
+<body style="display:none">
+
+    <%- include standard-header.ejs %>
+
+        <div class="terms-container" style="width:80%; margin: 0 auto;">
+            <h1 class="big-title">Contact Us</h1>
+            <br>
+            <span class="info" style="font-weight: 400;">
+                    Flutur is always looking out for interesting people, opportunities &amp; collaborations! 
+                    <br>All you have to do to get in touch with us, state your purpose and say hello :)</span>
+
+            <h2>Looking to volunteer or do an internship with us? </h2>
+            <span class="info" style="font-weight: 400;">
+            Volunteer or intern with us from any part of the world!<br>
+            Fill up this <a href='https://goo.gl/forms/pc8kMcdEJQyIPCfJ3'>tiny form</a> to get started!
+            </span>
+
+            <h2>Want to collaborate or just drop in some feedback?</h2>
+            <span class="info" style="font-weight: 400;">Drop an email to us with your thoughts - hello@flutur.org <br>You can also call or message us at +91 9987378003
+            </span>
+
+
+            <h2>Send us a mail by post or magical owl here:</h2>
+            <span class="info" style="font-weight: 400;">
+                    Flutur, <br>#81 Da Costa Square, <br>St. Thomas town, <br>Bangalore - 560084.              
+                </span>
+        </div>
+
+        <div class="resp-footer">
+            <%- include footer_partial.ejs %>
+        </div>
+        <div class="small-resp-footer">
+            <%- include footer_small_partial.ejs %>
+        </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("body").fadeIn(800);
+    });
+</script>
+
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>About Us - Flutur</title>
+    <link rel="icon" href="image/header_logo.png" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand:400,700" />
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css-min/site.min.css">
+    <link rel="stylesheet" href="/css/black-style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111348597-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111348597-1');
+    </script>
+    <style>
+        @media all and (max-width: 699px) {
+            div {
+                box-sizing: border-box;
+            }
+            .trans-box,
+            .resp-footer,
+            .big-screen-sections,
+            .main-header {
+                display: none;
+            }
+            .small-trans-box,
+            .small-resp-footer,
+            .small-header-content,
+            .small-header-content-inner,
+            .tab-laptop-container,
+            .small-content-box,
+            .small-mobile-header {
+                display: block;
+            }
+            header {
+                padding: 80px 5px 0px 5px;
+            }
+            .amita-img-container {
+                padding: 30px 10px 0 10px;
+            }
+            header .header-content {
+                text-align: center;
+                padding: 100px 0 0px 0px;
+                position: relative;
+            }
+            .about-container,
+            .pledge-section,
+            .small-project-details-container,
+            .benefitting-ngos {
+                padding: 50px 15px 50px 15px;
+                text-align: center;
+            }
+            .chrome-extension {
+                padding: 50px 0 0 0;
+            }
+            .pink-quicksand-title {
+                font-size: 26px;
+                font-weight: bold;
+                line-height: 26px;
+            }
+            .black-quicksand-title {
+                font-size: 35px;
+                font-weight: bold;
+                line-height: 35px;
+            }
+            .tab-project-details-container {
+                padding: 0px 50px 20px 50px;
+            }
+            .know-how-container {
+                margin-left: 50px;
+            }
+            .impact-img {
+                width: 22px;
+                height: 22px;
+                margin-bottom: 5px;
+            }
+            .font-smaller {
+                font-size: 12px;
+            }
+            #footer-motivation {
+                margin-top: 0;
+            }
+            .gif-container {
+                margin-top: 20px;
+            }
+            .main-home-title {
+                visibility: hidden;
+                letter-spacing: -1px;
+                font-size: 35px;
+                line-height: 35px;
+            }
+            .primary-section-container {
+                padding: 0px 50px;
+            }
+            .img-responsive {
+                max-width: 90%;
+            }
+            .small-project-details-container {
+                text-align: center;
+            }
+            .basic-slide {
+                width: 175px;
+                padding: 10px 10px;
+                font-weight: 400;
+                border-radius: 5px 0 0px 5px;
+            }
+            label {
+                margin-left: -5px;
+                border-radius: 0px 5px 5px 0px;
+                padding: 10.5px 5px;
+                box-shadow: 2px 9px 20px 0 rgba(0, 0, 0, 0.1);
+            }
+            .email-submit {
+                padding: 10px 5px;
+                border: 1.5px solid #E5E5E5;
+                border-radius: 5px;
+                background-color: #FFFFFF;
+                color: #17B487;
+                text-align: center;
+                font-family: Quicksand;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 12px;
+            }
+            .grid-column {
+                width: 100%;
+            }
+            .grid-container {
+                padding: 10px 20px;
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+                -ms-transform: translateX(-20px);
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+        
+        .fadeInLeft {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+            -webkit-animation-duration: 1s;
+            -moz-animation-duration: 1s;
+            animation-duration: 1s;
+        }
+        
+        .team:hover .t-img {
+            -webkit-transform: scale(1.03);
+            -moz-transform: scale(1.03);
+            -o-transform: scale(1.03);
+            -ms-transform: scale(1.03);
+            transform: scale(1.03);
+        }
+        
+        .team .t-img {
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            -ms-transition: all 0.5s ease-out;
+            /* transition: all 2s ease-out; */
+            /* width: 200%; */
+            /* max-width: none; */
+        }
+    </style>
+</head>
+
+<body style="display:none">
+
+    <%- include standard-header.ejs %>
+
+        <div class="terms-container" style="width:80%; margin: 0 auto; padding: 10px 10px 10px 10px;">
+            <div class="big-title" style="margin:20px 0px 0px 0px">About Us</div>
+
+            <h2> What is flutur?</h2>
+            <p><span style="font-weight: 400;">
+                Flutur, (translates to “Butterfly”) was started with foundations derived from the famous ‘Chaos Theory’ wherein lies a phenomenon commonly known as ‘The Butterfly Effect’. We believe that even the tiniest &amp; most random act of kindness by a single person, has the potential to create a cascading, colossal impact further down in the timeline of all mankind.
+                <br><br>Flutur was started in December 2017, with an aim to create a multitude of mobile and web products that can be used for free! These products are largely focused (but not limited to) on raising money by alternative means i.e. without having users spend actual money. 
+                All funds are donated to fund frugal innovations, social projects by NGOs and individuals that are working to uplift society in their own special way. These low-cost, easy-to-use products have a unique twist to them which potentially make them powerful drivers of change today.
+                A single user of our first product, <a href='http://bit.ly/flutur-tab'>Flutur New Tab</a> can raise money in a day enough to plant a tree, with zero effort from their side. By extension, 1000 users would collectively be able to raise funds to plant a forest of 1000 trees every single day! It is a completely free way for users to help those who need it and it takes only a few seconds to start!
+                
+            <h2>Who are we?</h2>
+            <p><span style="font-weight: 400;">
+                Flutur was started by 3 passionate individuals that occupied busy roles in different tech startups in Bangalore, India, each having a strong inclination towards applying their acquired skills and knowledge from the tech industry to create an impact on the social front. More and more time was being spent behind laptops at their workplace, and so, the idea of utilizing this otherwise unutilized time by busy people similar to us, to actually do some good in this world, was born.<br><br>To this end, the first tech product <a href='http://bit.ly/flutur-tab'>Flutur New Tab</a>, a Chrome Extension which raises funds when users open new tabs and view non-intrusive advertisements was created. These funds are then donated to NGOs and projects that have created a significant impact on society. 
+            </span></p>
+
+            <div class="grid-row" style="margin:50px 0px 10px 40px">
+                <div class="details-grid-column team team">
+                    <div class="blog-img t-img" style="background-image:url('https://scontent.fblr8-1.fna.fbcdn.net/v/t31.0-8/966419_10151820386648576_1017703376_o.jpg?oh=bd0a892470775d95bdea512e7d30327c&oe=5B485503');">
+                    </div>
+                    <h2 class="blog-outside-title"> Mallika Priya Khullar</h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        MIT Manipal &nbsp;&#8226;&nbsp; Amazon &nbsp;&#8226;&nbsp; Tinystep <br></div>
+                    <!-- <h3 class="short-desc">still listens to eminem. also binge watches jimmy fallon #hashtag videos. can quote LOTR and HP dialogues in sleep. loves doggos.</h3> -->
+                    <div style="display:block; margin-bottom:50px; margin-top:15px">
+                        <a href="https://www.facebook.com/mallika.khullar" class="inline-block"><img style="height:40px; width: 40px; margin-right:5px" src="/image/facebook-icon.png" /></a>
+                        <a href="https://www.linkedin.com/in/mallikakhullar/" class="inline-block"><img style="height:40px; width: 40px; " src="/image/linked-icon.png" /></a>
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/c_scale,h_896/v1519017457/aaa_ohtlfr.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Joel John Koshy </h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+
+                        MSRIT Bangalore &nbsp;&#8226;&nbsp; Spoyl &nbsp;&#8226;&nbsp; Tinystep <br></div>
+                    <div style="display:block; margin-bottom:50px; margin-top:10px">
+                        <a href="https://www.facebook.com/j.j.k892" class="inline-block"><img style="height:40px; width: 40px; margin-right:5px" src="/image/facebook-icon.png" /></a>
+                        <a href="https://www.linkedin.com/in/joel-john-koshy-5565bb53/" class="inline-block"><img style="height:40px; width: 40px; " src="/image/linked-icon.png" /></a>
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/c_scale,h_701/v1519017457/ccc_hl76rq.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Rahul Mallapur </h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+
+                        IIT Bombay &nbsp;&#8226;&nbsp; Zynga&nbsp;&#8226;&nbsp;Tinystep <br></div>
+
+                    <div style="display:block; margin-bottom:50px; margin-top:10px">
+                        <a href="https://www.facebook.com/rahulkmallapur" class="inline-block"><img style="height:40px; width: 40px; margin-right:5px" src="/image/facebook-icon.png" /></a>
+                        <a href="https://www.linkedin.com/in/rahul-mallapur-8a078630/" class="inline-block"><img style="height:40px; width: 40px; " src="/image/linked-icon.png" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <p><span style="font-weight: 400; margin-top:-10px">
+                    Our team has expanded to also include like minded, spirited interns and volunteers that are working towards making this dream a reality. 
+                </span></p>
+
+            <div class="grid-row" style="margin:50px 0px 50px 40px;">
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('https://res.cloudinary.com/epicfoundation/image/upload/v1518676231/unnamed_tbsmiy.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Akanksha Thapa </h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Social Media Influencer
+                    </div>
+
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1520180322/xx_vpzlb5.png');">
+                    </div>
+                    <h2 class="blog-outside-title"> Urmita Chowdhury </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1519880264/unnamed_sj8w7o.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Akansha Chowdhry </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1520233564/lkjlkj_ofkxds.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Sreemoyee Mukherjee </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/c_scale,h_736/v1522150105/PhotoGrid_1521299738370_1_y0ji2v.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Aniketh Baghoriya </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Social Media Influencer
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1520353039/apo.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Apoorva Patnaik </h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1520666761/12540575_561169917380692_3614451364045951586_n_p8j5gv.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Shefali Ahuja </h2>
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Media Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1520878755/Screen_Shot_2018-03-12_at_11.48.55_pm_a1knqp.png');">
+                    </div>
+                    <h2 class="blog-outside-title"> Rhishita Das </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1522149392/me_cemtaq.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Manan </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Content Media Savant
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1522766047/aman_upgnbx.png');">
+                    </div>
+                    <h2 class="blog-outside-title"> Aman Dewan </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Social Media Influencer
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/c_scale,h_487/v1522149333/22137202_1053429091427337_5126874590994897598_o_qsao5q.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Nikhil Kodela </h2>
+                    <!-- <h3 class="short-desc">pretends is too awesome.</h3> -->
+                    <div style="display:block; margin-bottom:10px; margin-top:-8px">
+                        Social Media Influencer
+                    </div>
+                    <div style="display:block; margin-bottom: 50px;">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <h2>Our Advisors</h2>
+            <p><span style="font-weight: 400;">
+                Flutur is advised by experienced industry experts and founders that are devoted to help make its vision come true, in the best possible manner and implementation.
+            </span></p>
+
+
+            <div class="grid-row" style="margin:50px 0px 50px 40px;">
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1519656866/37ed76c_f7xtoc.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Latha Iyer </h2>
+                    <!-- <h3 class="short-desc"></h3> -->
+                    <div style="display:block; margin-bottom: 50px;">
+                        Director, Donut Labs and Research &nbsp;&#8226;&nbsp; Stanford University
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1519656866/274207-large_ch6dfc.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Suhail Abidi </h2>
+                    <div style="display:block; margin-bottom: 50px;">
+                        CEO, Tinystep&nbsp;&#8226;&nbsp; Stanford GSB &nbsp;&#8226;&nbsp; IIT Kanpur
+                    </div>
+                </div>
+                <div class="details-grid-column team">
+                    <div class="blog-img t-img" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1519029086/sa_qee6fs.jpg');">
+                    </div>
+                    <h2 class="blog-outside-title"> Dr. Ruplekha Khullar </h2>
+                    <!-- <h3 class="short-desc"></h3> -->
+                    <div style="display:block; margin-bottom: 50px;">
+                        Professor of Philoshophy, Delhi University
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>Which type of NGOs do we collaborate with?</h2>
+            <p><span style="font-weight: 400;">
+                    Flutur has started off with a goal of targeting NGOs and individuals that implement frugal (low cost) innovations and improvements in the rural reaches of India. Due to the low cost of production and implementation of such innovations, we believe that this initial focus will be the best way to bring out the true potential that lies behind an idea like flutur even during our initial stages. The focus will be directed towards larger projects as soon as the growth of the organization hits our predefined threshold.
+                </span></p>
+
+            <%- include contact_partial_small.ejs %>
+
+        </div>
+
+
+        <div class="resp-footer">
+            <%- include footer_partial.ejs %>
+        </div>
+        <div class="small-resp-footer">
+            <%- include footer_small_partial.ejs %>
+        </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("body").fadeIn(800);
+    });
+</script>
+
+</html>
