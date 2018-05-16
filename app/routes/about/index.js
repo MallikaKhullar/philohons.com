@@ -4,9 +4,12 @@ var Utils = require('../../utils');
 var deferred = require('./../../utils/deferred');
 var fn = require('./../../utils/functions');
 var moment = require('moment');
+var topicController = require('../../controllers/topics');
 
 router.get('/', function(req, res) {
-    res.render("about-us.ejs");
+    topicController.getAllTopics().pipe(function(topics) {
+        res.render("about-us.ejs", { topics });
+    });
 });
 
 

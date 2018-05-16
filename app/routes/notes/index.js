@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Utils = require('../../utils');
-var blogController = require('../../controllers/notes');
+var blogController = require('../../controllers/blogs');
 var deferred = require('./../../utils/deferred');
 var fn = require('./../../utils/functions');
 var moment = require('moment');
@@ -49,15 +49,14 @@ router.get('/', function(req, res) {
 });
 
 
-router.get('/:blogId', function(req, res) {
-    // var blog_id = req.params.blogId;
+router.get('/:year', function(req, res) {
+    var year = req.params.year;
 
-    // var def1 = {
-    //     details: blogController.getBlogDetails({ blog_id }),
-    //     recent: blogController.getBlogOverviews({ filter: { blog_id: { $nin: [blog_id] } }, count: 3 }),
-    //     userCount: userController.getAllUserCount(),
-    //     donationCount: donationController.getAllDonationCount()
-    // };
+    var def1 = {
+        details: blogController.getBlogOverviews({ "category_id": "year" })
+            // recent: blogController.getBlogOverviews({ filter: { blog_id: { $nin: [blog_id] } }, count: 3 }),
+
+    };
 
 
     // deferred.combine(def1).pipe(function(data) {

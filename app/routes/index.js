@@ -4,7 +4,6 @@ var Utils = require('../utils');
 var homePage = require('./home-page');
 var admissions = require('./admissions');
 var notes = require('./notes');
-var contactPage = require('./contact');
 var aboutPage = require('./about');
 
 // var termsAndConditions = require('./terms-conditions');
@@ -43,7 +42,6 @@ var allRoutes = function(app) {
     app.use('/', homePage);
     app.use('/admissions', admissions);
     app.use('/notes', notes);
-    app.use('/contact', contactPage);
     app.use('/about', aboutPage);
 };
 

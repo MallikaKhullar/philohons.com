@@ -1,5 +1,5 @@
 const Blog = require('../repo/mongo/blog.js');
-const BlogCategory = require('../repo/mongo/blog_category.js');
+const BlogCategory = require('../repo/mongo/topic.js');
 const { wrap: async } = require('co');
 var fn = require('./../utils/functions');
 var deferred = require('./../utils/deferred.js');

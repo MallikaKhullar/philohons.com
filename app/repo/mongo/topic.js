@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 
 var blogCategorySchema = mongoose.Schema({
-    category_id: { type: String, index: true },
-    category_name: String,
+    topic_id: { type: String, index: true },
+    topic_name: String,
 }, { _id: false });
 
 blogCategorySchema.statics = {
-    getAllCategories: function(data, cb) {
+    getAllCategories: function(cb) {
         this.find().lean().exec(cb);
     },
 
@@ -15,4 +15,4 @@ blogCategorySchema.statics = {
     }
 }
 
-module.exports = mongoose.model('BlogCategory', blogCategorySchema);
+module.exports = mongoose.model('Topic', blogCategorySchema);

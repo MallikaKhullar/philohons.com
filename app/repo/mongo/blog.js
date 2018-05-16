@@ -16,10 +16,15 @@ var blogSchema = mongoose.Schema({
     blog_short_desc: String,
     title_photo_url: String,
     title_photo_caption: String,
-    meta_keywords: String,
     meta_desc: String,
-    category_id: { type: String, index: true },
-    category_name: String, //can be backfilled when category updated
+    type: {
+        type: String,
+        enum: [
+            'admission', 'note'
+        ]
+    },
+    topic_id: String,
+    topic_name: String,
     author_name: String,
     author_photo_url: String,
     timestamp: { type: Number, required: true, index: true },
@@ -54,4 +59,4 @@ blogSchema.statics = {
     }
 }
 
-module.exports = mongoose.model('Blog', blogSchema);
+module.exports = mongoose.model('Note', blogSchema);
