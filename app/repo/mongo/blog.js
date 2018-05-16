@@ -17,6 +17,12 @@ var blogSchema = mongoose.Schema({
     title_photo_url: String,
     title_photo_caption: String,
     meta_desc: String,
+    featureType: {
+        type: String,
+        enum: [
+            'featured', 'semifeatured', 'none'
+        ]
+    },
     type: {
         type: String,
         enum: [
@@ -35,6 +41,7 @@ var blogSchema = mongoose.Schema({
 });
 blogSchema.statics = {
     getAllBlogs: function(data, cb) {
+        console.log("reached here", data);
         var count = data.count || 9;
         var offset = data.offset || 0;
         var sortBy = data.sortBy || "none";
@@ -59,4 +66,4 @@ blogSchema.statics = {
     }
 }
 
-module.exports = mongoose.model('Note', blogSchema);
+module.exports = mongoose.model('Blog', blogSchema);

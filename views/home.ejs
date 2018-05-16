@@ -67,8 +67,6 @@
                 <!-- end header__social -->
 
 
-
-
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
                 <%- include header-nav-partial.ejs %>
@@ -90,13 +88,19 @@
                         <div class="entry" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1526122432/old-books-436498_1280_mtbgik.jpg');">
 
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Admissions</a></span>
+                                <span class="entry__category"><a href="#0"><%-featured.topic_id%></a></span>
 
-                                <h1><a href="#0" title="">The Scope of Studying Philosophy</a></h1>
+                                <h1>
+                                    <a href="#0" title="">
+                                        <%-featured.blog_title%>
+                                    </a>
+                                </h1>
 
                                 <div class="entry__info">
                                     <ul class="entry__meta">
-                                        <li>December 29, 2017</li>
+                                        <li>
+                                            <%-featured.type%>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -109,45 +113,35 @@
 
                     <div class="featured__column featured__column--small">
 
-                        <div class="entry" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1526123420/graduation-2613177_1280_e6rtsc.jpg');">
+                        <% for(var i=0; i<semifeatured.length; i++) { %>
+                            <div class="entry" style="background-image:url('http://res.cloudinary.com/epicfoundation/image/upload/v1526123420/graduation-2613177_1280_e6rtsc.jpg');">
 
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Management</a></span>
+                                <div class="entry__content">
+                                    <span class="entry__category"><a href="#0"><%-semifeatured[i].topic_id%></a></span>
 
-                                <h1><a href="#0" title="">MBA After Philosophy</a></h1>
+                                    <h1>
+                                        <a href="#0" title="">
+                                            <%-semifeatured[i].blog_title%>
+                                        </a>
+                                    </h1>
 
-                                <div class="entry__info">
+                                    <div class="entry__info">
 
-
-                                    <ul class="entry__meta">
-                                        <li>December 27, 2017</li>
-                                    </ul>
+                                        <ul class="entry__meta">
+                                            <li>
+                                                <%-semifeatured[i].type%>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <!-- end entry__content -->
+
                             </div>
-                            <!-- end entry__content -->
-
-                        </div>
-                        <!-- end entry -->
-
-                        <div class="entry" style="background-image:url('https://d1u4oo4rb13yy8.cloudfront.net/article/65528-csznrdlgrf-1512659433.jpg');">
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
-
-                                <h1><a href="#0" title="">Philosophy for UPSC Exams</a></h1>
-
-                                <div class="entry__info">
+                            <% } %>
+                                <!-- end entry -->
 
 
-                                    <ul class="entry__meta">
-                                        <li>December 21, 2017</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- end entry__content -->
-
-                        </div>
-                        <!-- end entry -->
+                                <!-- end entry -->
 
                     </div>
                     <!-- end featured__small -->

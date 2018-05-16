@@ -5,10 +5,17 @@ var deferred = require('./../../utils/deferred');
 var fn = require('./../../utils/functions');
 var moment = require('moment');
 var topicController = require('../../controllers/topics');
+var blogController = require('../../controllers/blogs');
 
 router.get('/', function(req, res) {
-    topicController.getAllTopics().pipe(function(topics) {
-        res.render("about-us.ejs", { topics });
+    var def = {
+        topics: topicController.getAllTopics(),
+        blogs: blogController.getBlogOverviews({})
+    };
+
+    deferred.combine(def).pipe(function(data) {
+        console.log("data", data);
+        res.render("about-us.ejs", { topics: data.topics, blogs: data.blogs });
     });
 });
 

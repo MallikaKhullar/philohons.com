@@ -42,7 +42,9 @@ exports.getBlogCountForCategory = function(category) {
 };
 
 exports.getBlogOverviews = function(data) {
+    console.log("called");
     return fn.defer(fn.bind(Blog, 'getAllBlogs'))(data).pipe(function(blogs) {
+        console.log("blogs");
         for (var i = 0; i < blogs.length; i++) blogs[i] = constructPayload(blogs[i]);
         return deferred.success(blogs);
     });
