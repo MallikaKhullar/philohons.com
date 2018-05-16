@@ -42,9 +42,7 @@ exports.getBlogCountForCategory = function(category) {
 };
 
 exports.getBlogOverviews = function(data) {
-    console.log("called");
     return fn.defer(fn.bind(Blog, 'getAllBlogs'))(data).pipe(function(blogs) {
-        console.log("blogs");
         for (var i = 0; i < blogs.length; i++) blogs[i] = constructPayload(blogs[i]);
         return deferred.success(blogs);
     });
@@ -55,6 +53,7 @@ function constructPayload(blog) {
         blog_id: blog.blog_id,
         blog_title: blog.blog_title,
         title_photo_url: blog.title_photo_url,
-        blog_short_desc: blog.blog_short_desc
+        blog_short_desc: blog.blog_short_desc,
+        topic_name: blog.topic_name
     }
 }

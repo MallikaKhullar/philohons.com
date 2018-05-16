@@ -1,21 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var RouteHandler = require('../../handlers/route_handler');
-var homeController = require('../../controllers/home');
 var deferred = require('./../../utils/deferred');
 var fn = require('./../../utils/functions');
 var Utils = require('../../utils');
-
+var topicController = require('../../controllers/topics');
+var blogController = require('../../controllers/blogs');
 
 router.get('/', function(req, res) {
-    res.render("home.ejs");
+    var def = {
+        blogs: blogController.getBlogOverviews({})
+    };
 
-    // homeController.getBlogOverviews({ count: 12, filter: { starred: true } }).pipe(function(data) {
-    //     var newdata = {
-    //         blogs: data.allBlogs
-    //     };
-    //     res.render("home.ejs", newdata);
-    // });
+    deferred.combine(def).pipe(function(data) {
+
+        res.render("home.ejs", { "featured": data.blogs[0], "semifeatured": data.blogs.slice(1) });
+    });
 });
 
 
