@@ -2,9 +2,7 @@ var config = require('config');
 var Utils = require('../utils');
 
 var homePage = require('./home-page');
-var admissions = require('./admissions');
-var notes = require('./notes');
-var aboutPage = require('./about');
+var blogs = require('./blogs');
 
 // var termsAndConditions = require('./terms-conditions');
 // var privacy = require('./privacy');
@@ -40,9 +38,7 @@ var allRoutes = function(app) {
     });
 
     app.use('/', homePage);
-    app.use('/admissions', admissions);
-    app.use('/notes', notes);
-    app.use('/about', aboutPage);
+    app.use('/blog', blogs);
 };
 
 module.exports = allRoutes;

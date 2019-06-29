@@ -41,7 +41,6 @@ var blogSchema = mongoose.Schema({
 });
 blogSchema.statics = {
     getAllBlogs: function(data, cb) {
-        console.log("reached here", data);
         var count = data.count || 9;
         var offset = data.offset || 0;
         var sortBy = data.sortBy || "none";
