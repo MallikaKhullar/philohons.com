@@ -951,5 +951,13 @@ textarea {
     text-align: center;
 }
 
+.image-caption {
+    color: #A9A9A9;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 10px;
+    padding: 15px 0px;
+}
 
 /*# sourceMappingURL=base.css.map */

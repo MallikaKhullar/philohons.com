@@ -3,16 +3,43 @@
     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
     <ul class="header__nav">
-        <li class="header-li"><a href="/" title="">Home</a></li>
-        <li class="header-li has-children">
-            <a href="#0" title="">Categories</a>
-            <ul class="sub-menu">
-                <li><a href="/admissions">Admissions</a></li>
-                <li><a href="/notes/year-one">1st Year</a></li>
 
-            </ul>
-        </li>
-        <li class="header-li"><a href="about" title="">About</a></li>
+            <% for(var i=0; i<headers.length; i++) { %>
+
+                <% if (headers[i].isBold) { %>
+                    <% if (headers[i].children) { %>
+                        <li class="header-li current has-children">
+                            <a href="/<%-headers[i].link%>" title=""><%-headers[i].type%></a>
+                            <ul class="sub-menu">
+                                <% for(var j=0; j<headers[i].children.length; j++) { %>
+                                    <li><a href="/<%-headers[i].children[j].link%>"><%-headers[i].children[j].type%></a></li>
+                                <% } %>
+                            </ul>
+                        </li>
+                    <% } else {%>
+                        <li class="header-li current"><a href="/<%-headers[i].link%>" title=""><%-headers[i].type%></a></li>
+                    <% } %>
+                <% } else {%>
+                    <% if (headers[i].children) { %>
+                        <li class="header-li has-children">
+                            <a href="/<%-headers[i].link%>" title=""><%-headers[i].type%></a>
+                            <ul class="sub-menu">
+                                <% for(var j=0; j<headers[i].children.length; j++) { %>
+                                    <li><a href="/<%-headers[i].children[j].link%>"><%-headers[i].children[j].type%></a></li>
+                                <% } %>
+                            </ul>
+                        </li>
+
+                    <% } else {%>
+                        <li class="header-li"><a href="/<%-headers[i].link%>" title=""><%-headers[i].type%></a></li>
+                    <% } %>
+                <% } %>
+
+            <% } %>
+
+    
+
+
     </ul>
     <!-- end header__nav -->
 

@@ -1842,7 +1842,7 @@ input::-moz-focus-inner {
   * ------------------------------------------------------------------- */
 
 .s-pageheader {
-    min-height: 174px;
+    min-height: 210px;
     background-image: url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -2945,7 +2945,7 @@ html.no-csstransitions .featured {
 }
 
 .s-content--narrow .row {
-    max-width: 960px;
+    max-width: 1100px;
 }
 
 .s-content__header {
@@ -3673,7 +3673,7 @@ footer h4::after {
 }
 
 .s-content__main img {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 3rem 0 3rem -6rem;
 }
 

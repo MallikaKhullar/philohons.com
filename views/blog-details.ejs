@@ -17,10 +17,9 @@
     <!-- CSS        
     ================================================== -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,500,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/home-base.css">
-    <link rel="stylesheet" href="css/css-3p.css">
-    <link rel="stylesheet" href="css/home-main.css">
+    <link rel="stylesheet" href="/css/home-base.css">
+    <link rel="stylesheet" href="/css/css-3p.css">
+    <link rel="stylesheet" href="/css/home-main.css">
 
     <!-- script
     ================================================== -->
@@ -46,7 +45,7 @@
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
-                        <img src="images/logo.svg" alt="Homepage">
+                        <img src="/image/philologo.png" alt="Homepage">
                     </a>
                 </div>
                 <!-- end header__logo -->
@@ -87,41 +86,8 @@
 
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
-                <nav class="header__nav-wrap">
+                <%- include header-nav-partial.ejs %>
 
-                    <h2 class="header__nav-heading h6">Site Navigation</h2>
-
-                    <ul class="header__nav">
-                        <li><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="">Categories</a>
-                            <ul class="sub-menu">
-                                <li><a href="category.html">Lifestyle</a></li>
-                                <li><a href="category.html">Health</a></li>
-                                <li><a href="category.html">Family</a></li>
-                                <li><a href="category.html">Management</a></li>
-                                <li><a href="category.html">Travel</a></li>
-                                <li><a href="category.html">Work</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-children current">
-                            <a href="#0" title="">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="single-video.html">Video Post</a></li>
-                                <li><a href="single-audio.html">Audio Post</a></li>
-                                <li><a href="single-gallery.html">Gallery Post</a></li>
-                                <li><a href="single-standard.html">Standard Post</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="style-guide.html" title="">Styles</a></li>
-                        <li><a href="about.html" title="">About</a></li>
-                        <li><a href="contact.html" title="">Contact</a></li>
-                    </ul>
-                    <!-- end header__nav -->
-
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
-                </nav>
                 <!-- end header__nav-wrap -->
 
             </div>
@@ -144,11 +110,10 @@
                     <%- details.blog_title %>
                 </h1>
                 <ul class="s-content__header-meta">
-                    <li class="date">December 16, 2017</li>
+                    <li class="date"><%- details.timestamp %></li>
                     <li class="cat">
-                        In
-                        <a href="#0">Lifestyle</a>
-                        <a href="#0">Travel</a>
+                        in
+                        <a href="#0"><%- details.blog_title %></a>
                     </li>
                 </ul>
             </div>
@@ -165,30 +130,46 @@
 
             <div class="col-full s-content__main">
 
-                <p class="lead">Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum
-                    sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint.</p>
+                <% for(var i=0; i<details.paragraphs.length; i++) { %>
 
-                <p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum
-                    sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor
-                    voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-                </p>
+                        <% if (typeof details.paragraphs[i].paragraph_title != 'undefined') { %>
+                            <h2>
+                                <%- details.paragraphs[i].paragraph_title %>
+                            </h2>
+                        <% } %>
 
-                <p>
+                        <% if (typeof details.paragraphs[i].image_url != 'undefined') { %>
+                            <div style="text-align:center;">
+                                <img style="margin:0" alt="<%-details.paragraphs[i].image_alt_text%>" src="<%-details.paragraphs[i].image_url%>" class="para-image">
+                                <% if (typeof details.paragraphs[i].image_caption != 'undefined') { %>
+                                    <div class="image-caption">
+                                        <%- details.paragraphs[i].image_caption %>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% } %>
+
+                    <p><%- details.paragraphs[i].paragraph_text %></p>
+
+                <% } %>
+             
+
+                <!-- <p>
                     <img src="images/wheel-1000.jpg" srcset="images/wheel-2000.jpg 2000w, images/wheel-1000.jpg 1000w, images/wheel-500.jpg 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="">
                 </p>
 
                 <h2>Large Heading</h2>
 
                 <p>Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> id quod maxime placeat facere possimus, omnis
-                    dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p>
-
+                    dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p> -->
+<!-- 
                 <blockquote>
                     <p>This is a simple example of a styled blockquote. A blockquote tag typically specifies a section that is quoted from another source of some sort, or highlighting text in your post.</p>
                 </blockquote>
 
                 <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia
                     quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis
-                    nostrud sed sed.</p>
+                    nostrud sed sed.</p> -->
 
                 <h3>Smaller Heading</h3>
 
@@ -622,7 +603,6 @@
                     <ul class="s-footer__linklist">
                         <li><a href="#0">Home</a></li>
                         <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">Styles</a></li>
                         <li><a href="#0">About</a></li>
                         <li><a href="#0">Contact</a></li>
                         <li><a href="#0">Privacy Policy</a></li>

@@ -5,6 +5,7 @@ var blogController = require('../../controllers/blogs');
 var deferred = require('./../../utils/deferred');
 var fn = require('./../../utils/functions');
 var moment = require('moment');
+var headerUtils = require('../../utils/headerUtils')
 
 router.get('/', function(req, res) {
     // var type = req.query.type || "all";
@@ -114,9 +115,10 @@ router.get('/:blogId', function(req, res) {
         };
 
         blogController.getBlogOverviews(filterSimilar).pipe(function(similar) {
-            newdata.similar = similar;
+            newdata.similar = similar
+            newdata.headers = headerUtils.getBlogHome()
             console.log(newdata)
-            res.render("blog-details.ejs", newdata);
+            res.render("blog-details.ejs", newdata)
         });
     });
 });
