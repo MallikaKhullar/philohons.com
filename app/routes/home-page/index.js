@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
     };
 
     deferred.combine(def).pipe(function(data) {
-        res.render("home.ejs", { featured: data.blogs[0], semifeatured: data.blogs.slice(1), headers: headerUtils.getHeaderHome()});
+        res.render("home.ejs", { featured: data.blogs[0], semifeatured: data.blogs.slice(1), headers: headerUtils.getHomeHeaders()});
     });
 });
 

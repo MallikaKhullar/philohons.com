@@ -32,20 +32,20 @@ router.get('/', function(req, res) {
     // def1.blogCount = blogController.getBlogCountForCategory(type);
 
     // deferred.combine(def1).pipe(function(data) {
-    //     var newdata = {
-    //         blogs: data.all,
-    //         stats: {
-    //             donations: "Rs. " + Utils.getCommaSeparatedMoney(data.donationCount),
-    //             followers: Utils.getCommaSeparatedNumber(data.userCount)
-    //         },
-    //         currentPage: page,
-    //         currentCategoryId: type,
-    //         endOfPagination: (data.blogCount <= offset + count)
-    //     };
+        var newdata = {
+            blogs: [],
+            stats: {
+                donations: "3",
+                followers: 3
+            },
+            currentPage: 1,
+            currentCategoryId: "type",
+            endOfPagination: true
+        };
 
-    //     if (data.category) newdata.category = data.category;
+        // if (data.category) newdata.category = data.category;
 
-    //     res.render("blogs.ejs", newdata);
+        res.render("blogs.ejs", newdata);
     // });
 });
 
@@ -116,7 +116,7 @@ router.get('/:blogId', function(req, res) {
 
         blogController.getBlogOverviews(filterSimilar).pipe(function(similar) {
             newdata.similar = similar
-            newdata.headers = headerUtils.getBlogHome()
+            newdata.headers = headerUtils.getBlogHeaders()
             console.log(newdata)
             res.render("blog-details.ejs", newdata)
         });

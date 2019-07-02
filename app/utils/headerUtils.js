@@ -1,5 +1,6 @@
-exports.getHeaderHome = () => [
-    { type: "Blog", link: "blog", isBold: true },  
+exports.getHomeHeaders = () => [
+    { type: "Home", link: "", isBold: true },  
+    { type: "Blog", link: "blog"},  
     {
         type: "Categories",
         children: [
@@ -10,7 +11,20 @@ exports.getHeaderHome = () => [
     { type: "Contact", link: "contact"},  
 ]
 
-exports.getBlogHome = () => [
+exports.getBlogHeaders = () => [
+    { type: "Home", link: ""},  
+    { type: "Blog", link: "/blog", isBold: true },  
+    {
+        type: "Categories",
+        children: [
+            { type: "1st Year Students", link: "blog/first-year" },
+            { type: "Admissions", link: "blog/admissions" }
+        ]
+    },
+    { type: "Contact", link: "contact"},  
+]
+
+exports.getBlogMain = () => [
     { type: "Home", link: "", isBold: true },  
     {
         type: "Categories",

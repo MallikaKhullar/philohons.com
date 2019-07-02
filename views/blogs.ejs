@@ -39,165 +39,6 @@
     <link rel="stylesheet" href="/css/mobile-view.css">
     <link rel="stylesheet" href="/css/blog.css">
 
-    <style>
-        @media all and (max-width: 699px) {
-            #am-container {
-                display: none;
-            }
-            .paginate-big {
-                display: none;
-            }
-            .paginate-small {
-                padding: 20px 20px 50px 20px;
-                display: block;
-            }
-            .navbar-brand>img {
-                height: 90%;
-                padding: 10px 0 0 15px;
-                width: auto;
-            }
-            .grid-container {
-                padding: 0px 20px 10px 20px;
-            }
-            .blog-outside-title {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                font-family: Roboto;
-                font-size: 22px;
-                font-weight: bold;
-                line-height: 28px;
-                margin: 10px 0px;
-            }
-            .blog-short-desc {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                color: #4C4C4C;
-                font-family: "Source Serif Pro";
-                font-size: 17px;
-                line-height: 22px;
-                margin: 7px 0px;
-                height: 45px;
-            }
-            .grid-column {
-                float: left;
-                width: 100%;
-                padding: 0px 10px 0px 10px;
-                cursor: pointer;
-            }
-            .grid-column img {
-                margin-top: 50px;
-                border-radius: 5px;
-            }
-            .big-title {
-                color: #000000;
-                font-family: Quicksand;
-                font-size: 35px;
-                font-weight: bold;
-                line-height: 30px;
-                margin: 30px 0px -20px 10px;
-            }
-            .category-container {
-                display: none;
-            }
-            .category-container-small {
-                display: block;
-                width: 100%;
-                padding: 15px;
-            }
-            #blog-header {
-                display: none;
-            }
-            #blog-header-small {
-                display: block;
-                padding: 20px 0px;
-                overflow: auto;
-            }
-        }
-        
-        @media screen and (min-width: 700px) {
-            .paginate-small {
-                display: none;
-            }
-            .paginate-big {
-                display: block;
-            }
-            .category-container {
-                margin: 90px 0px 10px 0px;
-                padding: 10px 130px 0px 126px;
-                width: 100%;
-                height: 80px;
-            }
-            .category-container-small {
-                display: none;
-            }
-            #blog-header {
-                display: block;
-            }
-            #blog-header-small {
-                display: none;
-            }
-        }
-        
-        .blog-short-desc {
-            margin: 0px 0px 15px 0px;
-        }
-        
-        .blog-outside-title {
-            margin: 10px 0px 5px 0px;
-        }
-        
-        .more-pink-title {
-            color: #EF2A67;
-            font-family: Quicksand;
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 18px;
-        }
-        
-        .center-align {
-            text-align: center;
-        }
-        
-        .small-margin-top {
-            margin-top: 10px;
-        }
-        
-        .big-margin-top {
-            margin-top: 60px;
-        }
-        
-        .small-margin-bottom {
-            margin-bottom: 10px;
-        }
-        
-        .footer-title {
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-desc {
-            display: none
-        }
-        
-        .footer-icons {
-            font-size: 20px;
-        }
-        
-        .side-margin-5 {
-            margin: 0 15px;
-        }
-    </style>
-
-    <%- include partial-head.ejs %>
-
 
         <% if (typeof category != 'undefined') { %>
             <meta name="keywords" content="flutur, flutur effect, flutur bengaluru, flutur india, flutur foundation, flutur chrome tab, tabs for a change, chrome new tab, flutur tabs for a change, flutur new tab, flutur ngos donation, flutur donatewithoutdonating, flutur <%- category.category_name%>"
@@ -211,7 +52,6 @@
 
 <body style="display:none">
 
-    <%- include standard-header.ejs %>
 
         <div id="blog-header" class="box-shadow row" style="text-align: center;padding:12px 150px">
 
@@ -274,22 +114,6 @@
             </h1>
         </div>
 
-
-        <%- include all-blogs-container.ejs %>
-
-            <div id="am-container">
-                <div class="center-align">
-                    <!-- <script type="text/javascript" language="javascript">
-                        var aax_size = '728x90';
-                        var aax_pubname = 'flutur-21';
-                        var aax_src = '302';
-                    </script>
-                    <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script> -->
-
-                    <iframe width='728' height='90' frameborder='0' scrolling='no' src='https://widget.cuelinks.com/widgets/21896?pub_id=30220CL22951'></iframe>
-                </div>
-            </div>
-
             <div class="paginate-big row" style="padding:35px 30px 50px 30px;">
                 <div class="col-md-1" style="text-align: right;">
                     <% if (currentPage > 0) { %>
@@ -326,12 +150,6 @@
             </div>
 
 
-            <div class="resp-footer">
-                <%- include footer_partial.ejs %>
-            </div>
-            <div class="small-resp-footer">
-                <%- include footer_small_partial.ejs %>
-            </div>
 
 </body>
 
